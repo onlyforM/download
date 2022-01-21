@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYR Corp. | Notepad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+    
+
+
+    <header>
+      <a href="#" class="brand">HYR | Hardik</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="hardik.mp4"  muted loop autoplay  ></video>
+      
+
+
+      <div class="content active">
+        <h1>Fluent<br><span>Notepad</span></h1>
+        <p>Get this fluent notepad for Windows 10/11 this <br> notepad can be used to save, edit, open function <br> and also comes with themes and you can fully <br> customize it according to you </p>
+        <a href="Fluent Notepad.Msixbundle" download="Fluent Notepad.Msixbundle" class="btn1">Download</a>
+             
+        <div class="right-col">
+          <img src="play.png " id="icon">
+        </div>
+
+        <audio loop="" id="mySong">
+
+          <source src="sound.mp3" type="audio/mp3">
+        </audio>
+
+        <script>
+var mySong = document.getElementById("mySong")
+var icon = document.getElementById("icon")
+
+icon.onclick = function(){
+  if(mySong.paused){
+    mySong.play();
+    icon.src = "pause.png";
+  }else{
+    mySong.pause();
+    icon.src = "play.png";
+
+  }
+}
+        </script>
+
+      </div>
+      
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+
+  </body>
+</html>
