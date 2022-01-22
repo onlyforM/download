@@ -106,6 +106,20 @@ section{
   cursor: pointer;
 }
 
+.windows{
+  margin-left: 23%;
+  margin-top: -38px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+}
+
+#ico{
+  width: 50px;
+  cursor: pointer;
+  border-radius: 6.5px;
+}
+
 
 .home .content.active{
   display: block;
